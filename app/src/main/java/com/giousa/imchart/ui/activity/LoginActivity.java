@@ -21,7 +21,7 @@ import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
- * Description:
+ * Description:登录界面
  * Author:Giousa
  * Date:2016/12/1
  * Email:65489469@qq.com
