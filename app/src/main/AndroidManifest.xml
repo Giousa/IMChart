@@ -27,7 +27,8 @@
         android:theme="@style/AppTheme">
 
         <!--启动界面-->
-        <activity android:name=".ui.activity.SplashActivity">
+        <activity android:name=".ui.activity.SplashActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -36,13 +37,16 @@
         </activity>
 
         <!--登录界面-->
-        <activity android:name=".ui.activity.LoginActivity"/>
+        <activity android:name=".ui.activity.LoginActivity"
+                  android:launchMode="singleTask"/>
 
         <!--注册界面-->
-        <activity android:name=".ui.activity.RegisterActivity"/>
+        <activity android:name=".ui.activity.RegisterActivity"
+                  android:launchMode="singleTask"/>
 
         <!--主界面-->
-        <activity android:name=".ui.activity.MainActivity"/>
+        <activity android:name=".ui.activity.MainActivity"
+                  android:launchMode="singleTask"/>
 
         <!-- 设置环信应用的AppKey -->
         <meta-data android:name="EASEMOB_APPKEY"  android:value="kerykeion#imchat" />

@@ -1,5 +1,7 @@
 package com.giousa.imchart.ui.activity;
 
+import android.util.Log;
+
 import com.giousa.imchart.R;
 import com.giousa.imchart.presenter.SplashPresenter;
 import com.giousa.imchart.presenter.impl.SplashPresenterImpl;
@@ -13,9 +15,9 @@ import com.giousa.imchart.view.SplashView;
  */
 public class SplashActivity extends BaseActivity implements SplashView {
 
-    public static final String TAG = "SplashActivity";
+    public static final String TAG = SplashActivity.class.getSimpleName();
 
-    private static final int DELAY = 2000;
+    private static final int DELAY = 1000;
 
     private SplashPresenter mSplashPresenter;
     @Override
@@ -40,8 +42,11 @@ public class SplashActivity extends BaseActivity implements SplashView {
         }, DELAY);
     }
 
+    /**
+     * 若是已经成功登陆，那么下次进入，直接进入主界面
+     */
     @Override
     public void onLoggedIn() {
-
+        startActivity(MainActivity.class);
     }
 }
