@@ -5,6 +5,7 @@ import android.app.Application;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
@@ -37,11 +38,13 @@ public class IMChartApplication extends Application {
     private int mDuanSound;
     private int mYuluSound;
     private SoundPool mSoundPool;
+    private static Context mContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "onCreate: ");
+        mContext = getApplicationContext();
         initHuanXin();
         initBmob();
         initSoundPool();
@@ -49,6 +52,13 @@ public class IMChartApplication extends Application {
     }
 
 
+    public static Context getContext() {
+        return mContext;
+    }
+
+    public void setContext(Context context) {
+        mContext = context;
+    }
 
     private void initSoundPool() {
         mSoundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);

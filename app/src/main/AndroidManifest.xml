@@ -28,7 +28,7 @@
 
         <!--启动界面-->
         <activity android:name=".ui.activity.SplashActivity"
-            android:launchMode="singleTask">
+                  android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -46,6 +46,14 @@
 
         <!--主界面-->
         <activity android:name=".ui.activity.MainActivity"
+                  android:launchMode="singleTask"/>
+
+        <!---->
+        <activity android:name=".ui.activity.ChatActivity"
+                  android:launchMode="singleTask"/>
+
+        <!---->
+        <activity android:name=".ui.activity.AddFriendActivity"
                   android:launchMode="singleTask"/>
 
         <!-- 设置环信应用的AppKey -->
