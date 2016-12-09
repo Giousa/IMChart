@@ -1,6 +1,7 @@
 package com.giousa.imchart.ui.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,8 @@ public class DynamicFragment extends BaseFragment implements DynamicView {
     TextView mTitle;
     @InjectView(R.id.logout)
     Button mLogout;
+    @InjectView(R.id.tv_username)
+    TextView mTvUsername;
 
     private DynamicPresenter mDynamicPresenter;
 
@@ -47,8 +50,9 @@ public class DynamicFragment extends BaseFragment implements DynamicView {
     protected void init() {
         super.init();
         mDynamicPresenter = new DynamicPresenterImpl(this);
-        String logout = String.format(getString(R.string.logout), EMClient.getInstance().getCurrentUser());
-        mLogout.setText(logout);
+        String user = EMClient.getInstance().getCurrentUser();
+        Log.d(TAG, "当前用户 user=" + user);
+        mTvUsername.setText(user);
         mTitle.setText(getString(R.string.dynamic));
     }
 

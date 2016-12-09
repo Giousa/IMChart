@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.giousa.imchart.R;
 import com.giousa.imchart.event.AddFriendEvent;
 import com.giousa.imchart.model.AddFriendItem;
+import com.hyphenate.chat.EMClient;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -63,7 +64,8 @@ public class AddFriendItemView extends RelativeLayout {
     @OnClick(R.id.add)
     public void onClick() {
         String friendName = mUserName.getText().toString().trim();
-        String addFriendReason = getContext().getString(R.string.add_friend_reason);
+//        String addFriendReason = getContext().getString(R.string.add_friend_reason);
+        String addFriendReason = "我是:"+EMClient.getInstance().getCurrentUser()+",请求加为好友!";
         AddFriendEvent event = new AddFriendEvent(friendName, addFriendReason);
         EventBus.getDefault().post(event);
     }
