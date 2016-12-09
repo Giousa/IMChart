@@ -58,6 +58,7 @@ public class RegisterPresenterImpl implements RegisterPresenter{
             @Override
             public void done(User user, BmobException e) {
                 if (e == null) {
+                    //注册Bmob成功，前往环信注册
                     registerEaseMob(userName, pwd);
                 } else {
                     notifyRegisterFailed(e);
