@@ -1,7 +1,5 @@
 package com.giousa.imchart.ui.activity;
 
-import android.util.Log;
-
 import com.giousa.imchart.R;
 import com.giousa.imchart.presenter.SplashPresenter;
 import com.giousa.imchart.presenter.impl.SplashPresenterImpl;
@@ -17,7 +15,7 @@ public class SplashActivity extends BaseActivity implements SplashView {
 
     public static final String TAG = SplashActivity.class.getSimpleName();
 
-    private static final int DELAY = 1000;
+    private static final int DELAY = 1500;
 
     private SplashPresenter mSplashPresenter;
     @Override
@@ -47,6 +45,11 @@ public class SplashActivity extends BaseActivity implements SplashView {
      */
     @Override
     public void onLoggedIn() {
-        startActivity(MainActivity.class);
+        postDelay(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(MainActivity.class);
+            }
+        }, DELAY);
     }
 }

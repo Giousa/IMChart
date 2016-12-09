@@ -3,12 +3,18 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-    android:background="@color/bg_splash">
+    android:background="@drawable/splash_bg">
 
-    <ImageView
+
+    <TextView
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:text="IM即时通讯"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_funchat"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp"
+        android:id="@+id/textView"/>
 
 </RelativeLayout>
