@@ -1,14 +1,11 @@
 package com.giousa.imchart.ui.fragment;
 
 import android.content.DialogInterface;
-import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,12 +19,11 @@ import com.giousa.imchart.presenter.impl.ContactPresenterImpl;
 import com.giousa.imchart.ui.activity.AddFriendActivity;
 import com.giousa.imchart.ui.activity.ChatActivity;
 import com.giousa.imchart.view.ContactView;
-import com.giousa.imchart.view.SlideBar;
+import com.giousa.imchart.widget.SlideBar;
 import com.hyphenate.chat.EMClient;
 
 import java.util.List;
 
-import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 

@@ -1,4 +1,4 @@
-package com.giousa.imchart.view;
+package com.giousa.imchart.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.giousa.imchart.R;
 import com.giousa.imchart.model.ContactListItem;
 
+import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
@@ -36,6 +37,7 @@ public class ContactListItemView extends RelativeLayout {
 
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.view_contact_item, this);
+        ButterKnife.inject(this, this);
 
     }
 

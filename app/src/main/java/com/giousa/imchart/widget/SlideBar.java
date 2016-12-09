@@ -1,4 +1,4 @@
-package com.giousa.imchart.view;
+package com.giousa.imchart.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;

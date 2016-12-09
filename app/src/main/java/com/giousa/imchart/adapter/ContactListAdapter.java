@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.giousa.imchart.model.ContactListItem;
-import com.giousa.imchart.view.ContactListItemView;
+import com.giousa.imchart.widget.ContactListItemView;
 
 import java.util.List;
 

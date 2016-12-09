@@ -23,7 +23,7 @@
             </android.support.v7.widget.RecyclerView>
         </android.support.v4.widget.SwipeRefreshLayout>
 
-        <com.giousa.imchart.view.SlideBar
+        <com.giousa.imchart.widget.SlideBar
             android:id="@id/slide_bar"
             android:layout_width="20dp"
             android:layout_height="match_parent"
